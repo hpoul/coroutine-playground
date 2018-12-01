@@ -13,7 +13,8 @@
         <!-- encoders are assigned the type
              ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{360} - %msg%n</pattern>
+            <!--<pattern>%d{HH:mm:ss.SSS} [%thread] [%X{mdcTest}] %-5level %logger{360} - %msg%n</pattern>-->
+            <pattern>%d{HH:mm:ss.SSS} [%30thread] [%10X{mdcTest}] %msg%n</pattern>
         </encoder>
     </appender>
 
